@@ -5,86 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Korkmaz Network | Minecraft Sunucusu</title>
     <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            text-align: center;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        header {
-            padding: 50px 20px;
-            background: linear-gradient(180deg, #1a1a1a 0%, #121212 100%);
+
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
         }
-        h1 {
-            color: #ff0000;
-            font-size: 3rem;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+
+        /* Arka plan efektleri */
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(139, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.9) 80%);
+            z-index: 1;
         }
-        .subtitle {
-            font-size: 1.2rem;
-            color: #aaaaaa;
-            margin-top: 10px;
-        }
+
         .container {
-            max-width: 800px;
-            margin: 30px auto;
+            text-align: center;
+            z-index: 2;
             padding: 20px;
-            background-color: #1a1a1a;
-            border-radius: 10px;
-            border: 1px solid #ff0000;
         }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: 5px;
+            color: #ff0000;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 40px rgba(139, 0, 0, 0.4);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #cccccc;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
         .btn {
             display: inline-block;
-            background-color: #ff0000;
-            color: white;
-            padding: 12px 25px;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
             text-decoration: none;
-            font-weight: bold;
+            color: #ffffff;
             border-radius: 5px;
-            margin: 10px;
-            transition: 0.3s;
-            cursor: pointer;
-            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .btn:hover {
-            background-color: #b30000;
-            transform: scale(1.05);
+
+        .btn-discord {
+            background-color: #5865F2;
         }
-        .ip-box {
-            background-color: #262626;
-            padding: 15px;
-            font-size: 1.5rem;
-            font-family: 'Segoe UI', sans-serif;
-            border-radius: 5px;
-            display: inline-block;
-            margin: 20px 0;
-            border: 1px dashed #ff0000;
-            color: #ff0000;
-            font-weight: bold;
+
+        .btn-discord:hover {
+            background-color: #4752C4;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9rem;
+            color: #555555;
+            z-index: 2;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>KORKMAZ NETWORK</h1>
-        <p class="subtitle">Kalitenin ve Eğlencenin Yeni Adresi!</p>
-    </header>
+    <div class="background-overlay"></div>
 
     <div class="container">
-        <h2>Sunucu Durumu</h2>
-        <p>Büyük açılış için hazırlıklarımız tam gaz devam ediyor! Lobimiz ve gelişmiş sistemlerimiz tamamen hazırlandığında, sunucu IP adresimiz büyük açılış günü burada paylaşılacaktır. Takipte kalın!</p>
-        <div class="ip-box">IP Adresi Büyük Açılışta Aktif Olacak!</div>
+        <h1>Korkmaz Network</h1>
+        <p>IP Adresi Büyük Açılışta Aktif Olacak!</p>
+        
+        <div class="btn-container">
+            <!-- Discord linkin buraya tam olarak yerleştirildi kral -->
+            <a href="https://discord.gg/Tx9Ffxv3h" target="_blank" class="btn btn-discord">Discord'a Katıl</a>
+        </div>
     </div>
 
-    <div class="container">
-        <h2>Topluluğumuza Katıl!</h2>
-        <p>Açılış tarihini kaçırmamak, gelişmelerden anında haberdar olmak ve çekilişlere katılmak için Discord sunucumuza gelmeyi unutma.</p>
-        <a href="https://discord.gg/bb2xqnuey" class="btn" style="background-color: #5865F2;">Discord'a Katıl</a>
+    <div class="footer">
+        &copy; 2026 Korkmaz Network. Tüm Hakları Saklıdır.
     </div>
 
 </body>
